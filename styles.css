@@ -1,0 +1,270 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url('images/canada.jpg') no-repeat center center/cover;
+    color: #000000;
+    background-attachment: fixed;
+    /* Ensures background image stays fixed */
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.5);
+    /* Transparent background */
+    color: #000000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 5px;
+}
+
+/* Main Content Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 40px 0;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.2);
+    /* Semi-transparent background */
+    border-radius: 10px;
+}
+
+/* Sections and Cards */
+section {
+    padding: 60px 0;
+    margin: 20px 0;
+}
+
+section#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section#home .container {
+    background: rgba(0, 0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+/* About Page */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.about-text h2 {
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+/* Preparation Page */
+#preparation {
+    text-align: center;
+}
+
+#preparation .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#preparation .card {
+    width: 30%;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0);
+    /* Light background */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+    /* Allow vertical resizing of textarea */
+}
+
+form button {
+    padding: 10px;
+    background: #2E86C1;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: #21618C;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-text {
+        margin: 0;
+    }
+
+    .about-text {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.nav-active {
+    display: flex;
+}
